@@ -220,7 +220,7 @@ void hp98x6_base_state::hp98x6_base(machine_config &config, unsigned dot_clock, 
 	m_cpu->set_addrmap(AS_PROGRAM, &hp98x6_base_state::cpu_mem_map);
 	m_cpu->reset_cb().set(FUNC(hp98x6_base_state::cpu_reset_w));
 
-	RAM(config, m_ram).set_default_size("256K").set_extra_options("512K,1M");
+	RAM(config, m_ram).set_default_size("256K").set_extra_options("512K,1M,4M,7M");
 
 	MC6845(config, m_crtc, dot_clock / char_width);
 	m_crtc->set_char_width(char_width);
